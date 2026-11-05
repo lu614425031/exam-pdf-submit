@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+*.sqlite*
+*.db
+*.log
+*.pdf
+*.tsv
+*.csv
+*.xlsx
+*.zip
+.env*

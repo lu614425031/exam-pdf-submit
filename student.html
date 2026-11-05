@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>上機考交卷</title>
+<link rel="stylesheet" href="/style.css">
+<script src="/app.js" defer></script>
+</head>
+<body>
+<header><div class="wrap brand">上機考交卷 <span>學生端</span></div></header>
+<main class="wrap narrow" data-view="student">
+<h1>繳交作答檔</h1>
+<p id="identity" class="intro">正在確認登入與收件狀態…</p>
+<section class="card" id="pair-panel" hidden>
+<h2>使用紙本題目卷登入</h2>
+<form id="pair"><label for="student">學號</label>
+<input id="student" required maxlength="24" autocomplete="off" spellcheck="false">
+<label for="code">紙本題目卷上的一次性 Token</label>
+<div class="controls"><input id="code" required maxlength="17" placeholder="例如 K7RM-3X9P" autocomplete="off" spellcheck="false"><button>登入</button></div></form>
+</section>
+<section class="card" id="upload-panel" hidden>
+<h2>上傳 PDF 答案卷</h2><p>請依老師提供的答案卷格式作答，匯出成一份 PDF 後再繳交。上限 25 MiB。</p>
+<form id="upload"><label for="file">作答檔</label><input id="file" type="file" accept=".pdf,application/pdf" required>
+<div class="controls"><button id="send">確認交卷</button><button type="button" class="secondary refresh">更新狀態</button></div></form>
+</section>
+<section class="card" id="done-panel" hidden>
+<h2>交卷成功</h2><p id="result"></p><a class="button" href="/receipt">下載浮水印 PDF 收件單</a>
+</section>
+<p id="message" role="status" aria-live="polite"></p>
+</main>
+</body></html>

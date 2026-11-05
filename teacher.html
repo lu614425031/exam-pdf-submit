@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>上機考交卷｜教師端</title>
+<link rel="stylesheet" href="/style.css">
+<script src="/app.js" defer></script>
+</head>
+<body>
+<header><div class="wrap brand">上機考交卷 <span>教師端</span></div></header>
+<main class="wrap" data-view="teacher">
+<h1>考場收件</h1>
+<p class="intro" id="summary">正在讀取收件狀態…</p>
+<section class="card">
+<h2>登錄學號與產生紙本 Token</h2>
+<p>先登錄學號。紙本 Token 另行產生，學生首次成功登入時才綁定學號。</p>
+<form id="seat-form">
+<label for="roster">學號清單</label>
+<textarea id="roster" required rows="4" maxlength="20000" placeholder="12345678&#10;12345679"></textarea>
+<button>登錄學號</button>
+</form>
+<form id="token-form">
+<label for="token-count">未配對 Token 組數</label>
+<div class="controls"><input id="token-count" type="number" min="1" max="500" required><button>產生 Token</button></div>
+</form>
+<div id="activation">
+<label for="tokens">已保存的未使用 Token</label>
+<textarea id="tokens" readonly rows="5"></textarea>
+<div class="controls"><a class="button secondary" href="/teacher/tokens/download">下載未使用 Token</a></div>
+</div>
+<form id="reset-form">
+<label for="reset-student">換機時重設登入（請先核對身分）</label>
+<div class="controls"><input id="reset-student" maxlength="24" required placeholder="學號"><button>重設登入</button></div>
+</form>
+</section>
+<section class="card">
+<h2>繳交紀錄</h2>
+<div class="controls"><button id="accepting" disabled>開放收件</button><button type="button" class="secondary refresh">更新狀態</button><a class="button secondary" href="/teacher/export">下載 ZIP</a></div>
+<p id="message" role="status" aria-live="polite"></p>
+<div class="table-scroll"><table><thead><tr><th>學號</th><th>狀態</th><th>檔案</th><th>收件時間</th><th>操作</th></tr></thead><tbody id="rows"></tbody></table></div>
+</section>
+</main>
+</body></html>

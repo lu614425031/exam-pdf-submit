@@ -1,0 +1,32 @@
+:root { color-scheme: light; font-family: system-ui, "Microsoft JhengHei", sans-serif; color: #172940; background: #edf3f8; }
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; }
+header { background: #142a47; color: white; }
+.wrap { width: min(100% - 2rem, 64rem); margin: auto; }
+.brand { display: flex; gap: 1rem; align-items: center; padding: 1rem 0; font-weight: 700; }
+.brand span { font-size: .82rem; color: #d3e5ff; border: 1px solid #6484aa; padding: .2rem .5rem; border-radius: .35rem; }
+main { padding: 2rem 0; }
+.narrow { max-width: 42rem; }
+h1 { margin: 0; font-size: clamp(1.75rem, 5vw, 2.5rem); }
+h2 { margin: 0 0 .7rem; font-size: 1.22rem; }
+p { line-height: 1.6; }
+.intro { color: #425a75; margin-bottom: 1.4rem; }
+.card { border: 1px solid #d8e2ee; padding: 1.3rem; background: white; border-radius: .85rem; margin-bottom: 1rem; }
+.controls { display: flex; gap: .6rem; align-items: end; flex-wrap: wrap; }
+label { display: block; font-weight: 650; margin: .5rem 0; }
+input, textarea, button, .button { font: inherit; }
+input, textarea { border: 1px solid #97a9be; padding: .62rem .72rem; border-radius: .4rem; max-width: 100%; }
+input[type=file] { display: block; margin-bottom: 1rem; width: 100%; }
+button, .button { display: inline-block; padding: .62rem .8rem; text-decoration: none; font-weight: 650; color: #fff; background: #1656a2; border: 1px solid transparent; border-radius: .4rem; cursor: pointer; }
+button:disabled { cursor: default; opacity: .55; }
+.secondary { background: #eef5ff; color: #154980; border-color: #b7cee8; }
+:focus-visible { outline: 3px solid #1a70c5; outline-offset: 3px; }
+output { display: block; margin-top: 1rem; padding: .75rem; background: #e7f1ff; font-weight: 700; overflow-wrap: anywhere; }
+#message { color: #8c301a; }
+.table-scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; }
+th, td { text-align: left; padding: .65rem; border-bottom: 1px solid #e1e8f0; overflow-wrap: anywhere; }
+th { background: #eaf2fd; }
+
+textarea { display: block; width: 100%; margin-bottom: .7rem; }
